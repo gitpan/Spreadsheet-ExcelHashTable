@@ -19,9 +19,9 @@ name: Spreadsheet-ExcelHashTable
 provides:
   Spreadsheet::ExcelHashTable:
     file: lib/Spreadsheet/ExcelHashTable.pm
-    version: 0.01
+    version: 0.02
 requires:
   perl: 5.006
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.01
+version: 0.02

@@ -12,11 +12,11 @@ use Tie::IxHash;
 
 =head1 VERSION
 
-	Version 0.01
+	Version 0.02
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 sub new {
@@ -253,8 +253,8 @@ __END__
 
 =head2 Motivation
 
-	This Utility is more useful for converting randomly organized  Excel Tables to Perl hash. In my case it more useful in converting this Excel Information to a
-	EDA(Electronic Design Automation) tool scripts, using Template Tool Kit.
+	This Utility is more useful for converting randomly organized  Excel Tables to Perl hash. In my case it more useful in converting 
+	this Excel Information to a EDA(Electronic Design Automation) tool scripts, using Template Tool Kit.
 
 =head1 ExcelHashTable
 
@@ -405,14 +405,14 @@ Example:
 
 =head2 excel_hash
 
-Access excel_hash, you can modify the excel_hash parsed from the excel sheet
+Access excel_hash from $excel_table object, you can modify/manupulate the excel_hash parsed from the excel sheet
 
 	my $excel_table  = Spreadsheet::ExcelHashTable->new("Company.xls");
 	$excel_table->parse_table("sheet1", "BU") ;
 	$excel_table->parse_table("sheet2", "Employee") ;
 	$excel_table->{excel_hash} = .............
 
-You then write_excel or get_table to return the hash.
+You then use write_excel to write it to Excel or get_table to return the hash.
 
 =head1 Limitations/Rules
 
@@ -435,14 +435,14 @@ Follow rules in writing Excel sheet, so ExcelHashTable can parse the table
 
 	- Dont Merge any cells. Currenty L</excel_checker> cannot check this now. Will put this as a Part of next release
 
-	- xls format is not yet supported or havent been tested
+	- xlsx format is not yet supported or havent been tested
 
 
 
 
 =head1 AUTHOR
 
-Srinik, C<< <srinik.perl at gmail.com> >>
+Srinik, C<< <srinik.perl@gmail.com> >>
 
 =head1 BUGS
 
